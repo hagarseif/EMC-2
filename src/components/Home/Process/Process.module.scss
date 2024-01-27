@@ -1,0 +1,57 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/global";
+
+.process {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .img1{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  .all_processes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .img2{
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 2rem;
+      margin-top: 2rem;
+      background-color: $card-color;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+      padding: 36px 24px 20px 24px;
+      box-shadow: 0px 10px 15px 0px #0000001A;
+      height: 335px;
+      width: 295px;
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 1rem 0;
+        color: $main-color;
+      }
+      p {
+        text-align: center;
+        line-height: 28px;
+        color: $main-color;
+        font-size: 17px;
+        font-weight: 400;
+        width: 80%;
+      }
+    }
+
+  }
+}

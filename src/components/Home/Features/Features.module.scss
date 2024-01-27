@@ -1,0 +1,38 @@
+@import "../../assets/scss/variables";
+
+.feature {
+  .allcards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 2rem;
+      margin-top: 2rem;
+      background-color: $card-color;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+      padding: 36px 24px 20px 24px;
+      box-shadow: 0px 5px 4px 0px #00000040;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 1rem 0;
+        color: $main-color;
+      }
+      p {
+        text-align: center;
+        line-height: 28px;
+        color: $main-color;
+        font-size: 17px;
+        font-weight: 400;
+        width: 80%;
+      }
+    }
+  }
+}

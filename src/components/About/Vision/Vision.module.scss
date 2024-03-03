@@ -1,0 +1,25 @@
+
+@import "../../assets//scss/variables";
+
+.vision{
+    background-color: $back-color;
+    padding:  2rem;
+    align-items: center;
+    margin-top: 1rem;
+    .text{
+        h1{
+            font-weight: 700;
+            font-size: 48px;
+            color: $main-color;
+            letter-spacing:-1.62px;
+            
+        }
+        p{
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #172D47B8;
+            width: 90%;
+        }
+    }
+}

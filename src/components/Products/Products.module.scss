@@ -1,25 +1,41 @@
-@import "../../assets/scss/variables";
-@import "../../assets/scss/global";
+@import "../assets/scss/variables";
+@import "../assets/scss/global";
 
-.container {
+.all_work {
+
+  .text{
+    margin: 3rem 5.5rem 0rem;
+    h1{
+      font-weight: 700;
+      font-size: 54px;
+      color: $main-color;
+      line-height: 64px;
+    }
+    p{
+      font-weight: 400;
+      font-size: 18px;
+      color: #172D47B8;
+      line-height: 24px;
+    }
+  }
   .work {
-    display: flex;
-    margin-top: 2rem;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:1rem 4rem 2rem;
+    justify-content: center;
 
     .card {
-      width: 400px;
       height: 410px;
       display: flex;
       flex-direction: column;
       align-items: center;
       position: relative;
       img{
+        width: 400px;
         height: 302px;
       }
       .tech {
+        width: 400px !important;
         position: absolute;
         bottom: 2rem;
         display: flex;
@@ -63,13 +79,5 @@
       }
     }
   }
-  .link{
-    color: $main-color;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    .arrow{
-      margin-left: .5rem;
-  }
-  }
+ 
 }

@@ -14,27 +14,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-   
-    .meet {
-      color: $secondary-color;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 36px;
-    }
     .line {
-      height: 4px;
-      width: 65px;
-      background: linear-gradient(90deg, #3aabda 0%, #bedbe0 100%);
-      border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -o-border-radius: 20px;
+      margin-top: -70px;
 }
   }
   .team {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     justify-content: center;
+    row-gap: 2rem;
 
     .card {
       width: 382px;

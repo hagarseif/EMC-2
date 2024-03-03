@@ -8,6 +8,7 @@ import Process from '../components/Home/Process/Process'
 import Industry from '../components/Home/Industries/Industry'
 import OurWork from '../components/Home/OurWork/OurWork'
 import Team from '../components/Home/Team/Team'
+import Footer from '../components/Home/Footer/Footer'
 const Home = () => {
   return (
     <div>
@@ -20,6 +21,7 @@ const Home = () => {
         <Industry/>
         <OurWork/>
         <Team/>
+        <Footer/>
     </div>
   )
 }

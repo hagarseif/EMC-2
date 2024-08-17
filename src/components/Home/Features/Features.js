@@ -1,4 +1,3 @@
-/* eslint disable */
 
 import React, { useState } from "react";
 import { ReactComponent as F1 } from "../../assets/images/f1.svg";

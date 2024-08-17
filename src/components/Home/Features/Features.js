@@ -1,4 +1,5 @@
 /* eslint disable */
+
 import React, { useState } from "react";
 import { ReactComponent as F1 } from "../../assets/images/f1.svg";
 import { ReactComponent as F2 } from "../../assets/images/f2.svg";
@@ -8,7 +9,7 @@ import { ReactComponent as Line } from "../../assets/images/Sline.svg";
 
 import styles from "./Features.module.scss";
 const Features = () => {
-  const [feature, setFeature] = useState([
+  const [feature] = useState([
     {
       img: F1,
       title: "Dedicated Development Team",

@@ -7,8 +7,7 @@ import { ReactComponent as P4 } from "../../assets/images/p4.svg";
 import { ReactComponent as P5 } from "../../assets/images/p5.svg";
 import { ReactComponent as P6 } from "../../assets/images/p6.svg";
 import { ReactComponent as P7 } from "../../assets/images/p7.svg";
-import Img1 from "../../assets/images/Layer 6.png";
-import Img2 from "../../assets/images/Layer 8.png";
+
 const Process = () => {
   const process = [
     {
@@ -75,17 +74,15 @@ const Process = () => {
   ];
   return (
     <div className={`${styles.process} structure`}>
-      <img src={Img1} className={styles.img1} alt="" />
       <h1 className="main_title">Process We Follow</h1>
       <div className={styles.all_processes}>
         {process.map((p, i) => (
           <div className={styles.card} key={i}>
-            <p.img />
+            <p.img  className={styles.img}/>
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
           </div>
         ))}
-        <img src={Img2}  className={styles.img2} alt="" />
       </div>
     </div>
   );

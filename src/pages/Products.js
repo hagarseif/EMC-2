@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Home/Navbar/Navbar'
-import Panar from '../components/Home/Panar/Panar'
+import Panar from '../components/Home/Panar2/Panar'
 import WORK from '../components/Products/Products'
 import Footer from '../components/Home/Footer/Footer'
 const Products = () => {

@@ -42,7 +42,7 @@ const OurWork = () => {
         ))}
         
       </div>
-      <Link className={styles.link}>Discover more <Arrow className={styles.arrow}/></Link>
+      <Link className={styles.link} to="/products">Discover more <Arrow className={styles.arrow}/></Link>
     </div>
   );
 };

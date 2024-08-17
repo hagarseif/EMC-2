@@ -1,12 +1,13 @@
 import React from "react";
 import { ReactComponent as F1 } from "../../assets/images/footer1.svg";
 import { ReactComponent as F2 } from "../../assets/images/footer2.svg";
-import FooterImg from "../../assets/images/Footer.png";
 import styles from "./Footer.module.scss";
+import { ReactComponent as Logo } from "../../assets/images/FooterLogo.svg";
+
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <img src={FooterImg} alt="" />
+      
       <div className={styles.content}>
         <div className={styles.left}>
           <h1>
@@ -26,8 +27,7 @@ const Footer = () => {
           </div>
           </div>
           <div className={styles.right}>
-            <h1>LOGO</h1>
-            <p>We have the theory <br/> that solve everything</p>
+            <Logo/>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from '../../assets/images/Landing.png'
+import Img from '../../assets/images/Landing2.png'
 import styles from './Panar.module.scss'
 const Panar = () => {
   return (

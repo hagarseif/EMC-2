@@ -10,13 +10,13 @@ const About = () => {
           <h6>About EMC² Solutions</h6>
           <h2>Your Reliable Partner for any problem</h2>
           <p>
-           <span>EMC² Solutions is a community that offer a wide array of services
-            for customers and students.<br/> our creative team</span> design and develop
+            EMC² Solutions is a community that offer a wide array of services
+            for customers and students.<br/> our creative team design and develop
             custom software tailored specifically to our customer's business<br/>
             needs in high-quality and a cost-efficient way to bring growth to
-            your business.<br/><span>Our team also help students to grow in software world
+            your business.<br/>Our team also help students to grow in software world
             Empowering their beautiful Minds, Elevating their Software skills we
-            create a place Where Innovation Meets Education.</span> 
+            create a place Where Innovation Meets Education. 
           </p>
           <Link>
             See More <Arrow className={styles.arrow}/>

@@ -1,0 +1,34 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/global";
+
+.clients {
+  background-color: #9fcad140;
+  padding: 2rem 0;
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imgs{
+    margin: 3rem 2rem 2rem;
+  }
+  span {
+    font-family: Lato;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    color: #297899;
+
+  }
+  .line {
+    height: 4px;
+    width: 65px;
+    background: linear-gradient(90deg, #3aabda 0%, #bedbe0 100%);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+}

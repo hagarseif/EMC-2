@@ -19,7 +19,7 @@ const Services = () => {
       });
   }, []);
   return (
-    <div className={`${styles.container} structure`}>
+    <div className={`${styles.container} structure`} id="services">
       <h1 className="main_title">Services We Offer</h1>
       <div className={styles.all_services}>
         {service.map((d, i) => (

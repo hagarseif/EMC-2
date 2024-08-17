@@ -1,11 +1,10 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/global";
 
-
-.logo{
-    h2{
-        margin-left: .5rem;
-    }
+.logo {
+  h2 {
+    margin-left: 0.5rem;
+  }
 }
 // .nav{
 //     position: fixed;
@@ -13,21 +12,29 @@
 //     right: 0;
 //     left: 0;
 // }
-.navItem{
-    list-style: none;
-    padding-left: 1.2rem;
-.link{
+.navItem {
+  list-style: none;
+  padding-left: 1.2rem;
+ 
+  .link {
     text-decoration: none;
-    color:$main-color;
+    color: $main-color;
     font-weight: 700;
     font-size: 16px;
+  }
+  .link.active {
+    color: $secondary-color;
+  }
+  .link:hover{
+    color: $secondary-color;
+  }
 }
+
+.lang {
+  font-weight: 700;
 }
-.lang{
-    font-weight: 700;
-}
-.social{
-    .icon{
-        margin-right: .5rem;
-    }
+.social {
+  .icon {
+    margin-right: 0.5rem;
+  }
 }

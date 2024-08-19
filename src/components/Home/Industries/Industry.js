@@ -21,7 +21,7 @@ const Industry = () => {
   }, []);
 
   return (
-    <div className={`${styles.container} structure`}>
+    <div className={`${styles.container} structure`} id="industries">
         <h1 className='main_title'>Industries We Serve</h1>
         <div className={styles.all_services}>
         {data.map((d, i) => (

@@ -41,11 +41,13 @@ const Navbar = () => {
         </li>
 
         <li className={styles.navItem}>
-          <HashLink
-            to="/#services"
-            className={styles.link} smooth
-          >
+          <HashLink to="/#services" className={styles.link} smooth>
             Services
+          </HashLink>
+        </li>
+        <li className={styles.navItem}>
+          <HashLink to="/#industries" className={styles.link} smooth>
+            Industries
           </HashLink>
         </li>
 
@@ -74,13 +76,15 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <div className={styles.lang}>
-        <Globe />
-        <span className="px-2">Arabic</span>
-      </div>
-      <div className={styles.social}>
-        <Facebook className={styles.icon} />
-        <Linkedin className={styles.icon} />
+      <div className="d-flex align-items-center">
+        <div className={`${styles.lang} mx-5`}>
+          <Globe />
+          <span className="px-2">Arabic</span>
+        </div>
+        <div className={styles.social}>
+          <Facebook className={styles.icon} />
+          <Linkedin className={styles.icon} />
+        </div>
       </div>
     </div>
   );

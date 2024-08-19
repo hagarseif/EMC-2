@@ -57,10 +57,6 @@ const Products = () => {
           See how we brought value to <br />
           our partners’ products.
         </h1>
-        <p>
-          With a remarkable track record spanning over two decades, we have
-          successfully<br/> engineered for SMEs and mega-scale projects.
-        </p>
       </div>
       <div className={`${styles.work}`}>
         {work.map((d, i) => (

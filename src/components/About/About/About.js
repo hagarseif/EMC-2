@@ -5,12 +5,7 @@ const AboutUs = () => {
     <div className="d-flex align-items-center flex-column structure">
       <h1 className="main_title">About EMC²</h1>
       <p className={styles.about}>
-        We are an Egyptian software company specialized in providing information
-        technology solutions. Our team is proud of being made up of
-        distinguished Egyptians in the field of programming and software
-        development, and we strive to provide high quality services to our
-        customers. Empowering Minds, Elevating Software Where Innovation
-        Meets Education.
+      We believe every person ,student, teams, and enterprises have the potential to be amazing. And there’s a better way to bring out what they already have in them. We know this because we’ve lived it. we’re always evolving and wants everybody to evolve with us so our mission is to make sure that our customers have exactly what they need to unleash their edge.
       </p>
     </div>
   );

@@ -1,25 +1,85 @@
-
 @import "../../assets//scss/variables";
+@import "../../assets//scss/global";
 
-.vision{
-    background-color: $back-color;
-    padding:  2rem;
-    align-items: center;
+.vision {
+  background-color: $back-color;
+  padding: 2rem;
+  align-items: center;
+  display: flex;
 
-    .text{
-        h1{
-            font-weight: 700;
-            font-size: 48px;
-            color: $main-color;
-            letter-spacing:-1.62px;
-            
-        }
-        p{
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 24px;
-            color: #172D47B8;
-            width: 90%;
-        }
+  .text {
+
+    h1 {
+      font-weight: 700;
+      font-size: 48px;
+      color: $main-color;
+      letter-spacing: -1.62px;
     }
+    p {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      color: #172d47b8;
+      width: 90%;
+    }
+  }
 }
+////////////////////////////////////////////
+@media (max-width: 1100px) {
+  .vision {
+    .img_con {
+      .img {
+        width: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+    .vision {
+      .text{
+        h1{
+            font-size: 40px;
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .vision{
+        align-items: flex-start;
+    }
+  }
+  @media (max-width: 600px) {
+    .vision {
+        padding: 2rem 1rem;
+        .img_con {
+            .img {
+              width: 200px;
+            }
+          }
+      .text{
+        h1{
+            font-size: 32px;
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .vision {
+        padding: 2rem 1rem;
+        .img_con {
+            .img {
+              width: 170px;
+            }
+          }
+          .text{
+            p{
+                font-size: 16px;
+            }
+          }
+    }
+  }
+  @media (max-width: 470px) {
+    .vision {
+        padding: 2rem .5rem;
+    }
+  }

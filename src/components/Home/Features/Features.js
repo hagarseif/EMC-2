@@ -90,11 +90,11 @@ manner.`,
             slidesPerView: .8,
           },
           390: {
-            slidesPerView: 1.15,
+            slidesPerView: 1.07,
             spaceBetween:5,
           },
-          430: {
-            slidesPerView: 1.2,
+          425: {
+            slidesPerView: 1.1,
             spaceBetween: 5,
           },
           465: {

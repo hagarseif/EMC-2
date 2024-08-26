@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contact}>
-        <div>
+        <div className={styles.text_arrow}>
           <div className={styles.text}>
             <p className={styles.p1}>
               Don’t be stranger,
@@ -55,9 +55,9 @@ const Contact = () => {
               We’re always ready to help💙
             </p>
           </div>
-          <Letter />
+          <Letter className={styles.arrow1}/>
         </div>
-        <div>
+        <div className={styles.form_div}>
           <form onSubmit={handelSubmit}>
             <label htmlFor="name">Name</label>
             <input type="text" placeholder="" id="name" onChange={onhandelName} value={name}/>

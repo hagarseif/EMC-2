@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     .card {
       display: flex;
       align-items: center;
@@ -62,35 +62,6 @@
 }
 
 /////////////////////////////////
-// @media (max-width: 1400px) and (min-width: 1240px) {
-//   .process {
-//     .all_processes {
-//      column-gap: 20px;
-//     }
-//   }
-// }
-
-// @media (max-width: 1240px) and (min-width: 1050px) {
-//   .process {
-//     .all_processes {
-//       display: grid;
-//       grid-template-columns: repeat(3, 1fr);
-
-//     }
-//   }
-// }
-
-// @media (max-width: 1050px) and (min-width: 750px) {
-//   .structure {
-//     padding: 3rem 2rem 2rem;
-//   }
-//   .process {
-//     .all_processes {
-//       display: grid;
-//       grid-template-columns: repeat(2, 1fr);
-//     }
-//   }
-// }
 @media (max-width: 749px) {
   .process {
   .no_slider{

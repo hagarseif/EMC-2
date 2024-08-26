@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from '../../assets/images/Landing.png'
-import Img2 from '../../assets/images/mob_land.png'
-import Img3 from '../../assets/images/tab_land2.png'
+import Img2 from '../../assets/images/mob_landd.png'
+import Img3 from '../../assets/images/tab_landd2.png'
 import styles from './Panar.module.scss'
 const Panar = () => {
   return (

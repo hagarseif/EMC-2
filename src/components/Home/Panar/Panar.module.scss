@@ -4,10 +4,12 @@
     .img{
         height: 100%;
         width: 100%;
-    }
+}
     .mob_img,.tab_img{
         width: 100%;
         display: none;
+        border: none;
+        outline: none;
     }
 }
 ////////////////

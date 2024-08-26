@@ -2,13 +2,11 @@ import React from "react";
 import { ReactComponent as F1 } from "../../assets/images/footer1.svg";
 import { ReactComponent as F2 } from "../../assets/images/footer2.svg";
 import styles from "./Footer.module.scss";
-import { ReactComponent as Logo } from "../../assets/images/FooterLogo.svg";
+import { ReactComponent as Logo } from "../../assets/images/footer_logo.svg";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      
-      <div className={styles.content}>
+    <div className={styles.footer}>  
         <div className={styles.left}>
           <h1>
             Have problem?
@@ -27,9 +25,8 @@ const Footer = () => {
           </div>
           </div>
           <div className={styles.right}>
-            <Logo/>
+            <Logo className={styles.logo}/>
           </div>
-        </div>
       </div>
    
   );

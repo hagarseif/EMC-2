@@ -9,11 +9,12 @@ import styles from "./Navbar.module.scss";
 const Navbar = () => {
   return (
     <div
-      className={`${styles.nav} d-flex align-items-center justify-content-between py-3 px-5`}
+      className={`${styles.nav}`}
     >
       <div className={`${styles.logo} d-flex`}>
         <Logo />
       </div>
+      <div className={styles.nav_dis}>
       <ul className={`${styles.list} d-flex align-items-center m-0`}>
         <li className={styles.navItem}>
           <NavLink
@@ -76,8 +77,8 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <div className="d-flex align-items-center">
-        <div className={`${styles.lang} mx-5`}>
+      <div className={`${styles.lang_social} d-flex align-items-center `}>
+        <div className={`${styles.lang} `}>
           <Globe />
           <span className="px-2">Arabic</span>
         </div>
@@ -86,6 +87,8 @@ const Navbar = () => {
           <Linkedin className={styles.icon} />
         </div>
       </div>
+      </div>
+      
     </div>
   );
 };

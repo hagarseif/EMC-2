@@ -20,7 +20,7 @@ const Home = () => {
         <Services/>
         <Process/>
         <Industry/>
-        <OurWork/>
+        <OurWork/> 
         <Team/>
         <Clients/>
         <Footer/>

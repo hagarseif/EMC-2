@@ -5,24 +5,24 @@ import { ReactComponent as Arrow } from "../../assets/images/Vector.svg";
 import { Link } from "react-router-dom";
 const About = () => {
   return (
-    <div className={`${styles.about} d-flex align-items-center`}>
+    <div className={`${styles.about} `}>
       <div className={styles.text}>
         <h6>About EMC² Solutions</h6>
         <h2>Your Reliable Partner for any problem</h2>
         <p>
           EMC² Solutions is a community that offer a wide array of services for
-          customers and students.<br/> our creative team design and develop custom
-          software tailored specifically to our customer's business <br/> needs in
+          customers and students.  our creative team design and develop custom
+          software tailored specifically to our customer's business needs in
           high-quality and a cost-efficient way to bring growth to your
-          business. <br/>Our team also help students to grow in software world
-          Empowering their beautiful Minds, Elevating their <br/>Software skills we
+          business. Our team also help students to grow in software world
+          Empowering their beautiful Minds, Elevating their Software skills we
           create a place Where Innovation Meets Education.
         </p>
         <Link to='/about'>
           See More <Arrow className={styles.arrow} />
         </Link>
       </div>
-      <img src={Img} alt="" />
+      <img src={Img} alt="" className={styles.img}/>
     </div>
   );
 };

@@ -4,29 +4,19 @@
 .process {
   display: flex;
   flex-direction: column;
-  position: relative;
-  .img1 {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-  }
+  overflow: hidden;
+
   .all_processes {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    .img2 {
-      position: absolute;
-      bottom: 1rem;
-      right: 0;
-    }
+    gap: 2rem;
+    margin-top: 2rem;
     .card {
       display: flex;
       align-items: center;
       flex-direction: column;
-      margin-left: 2rem;
-      margin-top: 2rem;
       background-color: $card-color;
       border-radius: 12px;
       -webkit-border-radius: 12px;
@@ -37,21 +27,21 @@
       box-shadow: 0px 10px 15px 0px #0000001a;
       height: 335px;
       width: 295px;
-      &:hover{
+      &:hover {
         cursor: pointer;
-        background: linear-gradient(180deg, #297899 0%, #172D47 100%);
+        background: linear-gradient(180deg, #297899 0%, #172d47 100%);
       }
-      &:hover h3{
-        color:$white;
+      &:hover h3 {
+        color: $white;
       }
-      &:hover p{
-        color:$white;
+      &:hover p {
+        color: $white;
       }
-      &:hover .img path{
-        fill:$white;
+      &:hover .img path {
+        fill: $white;
       }
-      &:hover .img g path{
-        fill:$white;
+      &:hover .img g path {
+        fill: $white;
       }
       h3 {
         font-size: 19px;
@@ -68,5 +58,70 @@
         width: 80%;
       }
     }
+  }
+}
+
+/////////////////////////////////
+// @media (max-width: 1400px) and (min-width: 1240px) {
+//   .process {
+//     .all_processes {
+//      column-gap: 20px;
+//     }
+//   }
+// }
+
+// @media (max-width: 1240px) and (min-width: 1050px) {
+//   .process {
+//     .all_processes {
+//       display: grid;
+//       grid-template-columns: repeat(3, 1fr);
+
+//     }
+//   }
+// }
+
+// @media (max-width: 1050px) and (min-width: 750px) {
+//   .structure {
+//     padding: 3rem 2rem 2rem;
+//   }
+//   .process {
+//     .all_processes {
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//     }
+//   }
+// }
+@media (max-width: 749px) {
+  .process {
+  .no_slider{
+    display:none;
+  }
+}
+  .swiper{
+    display: grid;
+  }
+}
+@media (min-width: 750px) {
+  .swiper{
+    display:none;
+  }
+}
+@media (max-width: 480px) {
+  .process {
+  .swiper {
+    padding: .5rem !important;
+  }
+}
+}
+@media (max-width: 309px) {
+  .process {
+    .all_processes {
+  .card { 
+   width: 290px;
+   h3{
+    text-align: center;
+   }
+  }
+}
   }
 }

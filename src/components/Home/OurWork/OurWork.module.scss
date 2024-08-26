@@ -2,12 +2,15 @@
 @import "../../assets/scss/global";
 
 .container {
+  overflow: hidden;
+  
   .work {
     display: flex;
     margin-top: 2rem;
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    flex-wrap: wrap;
 
     .card {
       width: 400px;
@@ -18,6 +21,7 @@
       position: relative;
       img{
         height: 302px;
+        width: inherit;
       }
       .tech {
         position: absolute;
@@ -40,6 +44,7 @@
           font-weight: 700;
           color: $main-color;
           margin-bottom: 1rem;
+          text-align: center;
         }
         ul {
           display: flex;
@@ -71,5 +76,27 @@
     .arrow{
       margin-left: .5rem;
   }
+  }
+}
+
+@media (max-width: 879px) {
+  .container {
+  .no_slider{
+    display:none;
+  }
+}
+  .swiper{
+    display: grid;
+    padding: 1rem;;
+    .work
+   { .card{
+      width:368px;
+    }}
+  }
+}
+@media (min-width: 880px) {
+  .swiper{
+    display:none;
+   
   }
 }

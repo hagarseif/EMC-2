@@ -1,21 +1,26 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/global";
 
-.logo {
-  h2 {
-    margin-left: 0.5rem;
+
+.nav {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 1.1rem 3rem;
+}
+.nav_dis {
+  display: flex;
+  justify-content: space-between;
+  .lang_social {
+    .lang {
+      font-weight: 700;
+      margin: 0 3rem;
+    }
   }
 }
-// .nav{
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     left: 0;
-// }
 .navItem {
   list-style: none;
   padding-left: 1.2rem;
- 
+
   .link {
     text-decoration: none;
     color: $main-color;
@@ -25,16 +30,58 @@
   .link.active {
     color: $secondary-color;
   }
-  .link:hover{
+  .link:hover {
     color: $secondary-color;
   }
 }
 
-.lang {
-  font-weight: 700;
-}
 .social {
   .icon {
     margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .logo{
+    width: 131px;
+  }
+  .nav {
+    .nav_dis {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .nav {
+    grid-template-columns: 15% 85%;
+  }
+}
+@media (max-width: 991px) and (min-width: 830px) {
+  .nav {
+    grid-template-columns: 10% 90%;
+  }
+  .nav_dis {
+    display: flex;
+    justify-content: space-between;
+    .lang_social {
+      .lang {
+        font-weight: 700;
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 930px) {
+  .nav {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .nav{
+    padding: 1rem ;
+  }
+  .logo{
+    width:73px;
   }
 }

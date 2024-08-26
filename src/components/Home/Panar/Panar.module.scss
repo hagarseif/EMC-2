@@ -1,8 +1,33 @@
 
 .banar{
-    height: 100vh;
-    // padding-top: 1.5rem;
-    img{
+    // height: 100vh;
+    .img{
         height: 100%;
+        width: 100%;
+    }
+    .mob_img,.tab_img{
+        width: 100%;
+        display: none;
+    }
+}
+////////////////
+@media (max-width:950px){
+    .banar{
+        .img{
+            display: none;
+        }
+        .tab_img{
+            display: block;
+        }
+    }
+}
+@media (max-width:530px){
+    .banar{
+        .mob_img{
+            display: block;
+        }
+        .tab_img{
+            display: none;
+        }
     }
 }

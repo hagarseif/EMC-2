@@ -1,0 +1,112 @@
+/*******************/
+/*******************/
+/********************/
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=El+Messiri:wght@400;500;600&family=Istok+Web:wght@400;700&family=Lato:wght@300;400;700&family=Roboto:wght@100;300;400;500&family=RocknRoll+One&family=Tajawal:wght@200;300;400;500&display=swap");
+/********************/
+/********************/
+/********************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.title_line {
+  position: relative;
+}
+
+.title_line h1 {
+  z-index: 2;
+}
+
+.title_line .line {
+  position: absolute;
+  z-index: 1;
+  top: 61px;
+  right: 10px;
+}
+
+.all_steps {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.all_steps .card_steps {
+  width: 300px;
+  height: 347px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 1rem;
+}
+
+.all_steps .card_steps span {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.all_steps .card_steps .steps_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.all_steps .card_steps .steps_title h2 {
+  font-weight: 600;
+  font-size: 23px;
+  color: #172D47;
+  font-family: 'Poppins';
+  line-height: 27px;
+}
+
+.all_steps .card_steps .steps_title p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #172D47;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 1rem;
+  width: 81%;
+}
+
+.all_steps .Standards {
+  background-color: #c4e6f499;
+}
+
+.all_steps .Standards span {
+  color: #75C4E5;
+}
+
+.all_steps .Assistance {
+  background-color: #E7F1F3;
+}
+
+.all_steps .Assistance span {
+  color: #172D47;
+}
+
+.all_steps .Deliver {
+  background-color: #EBF7FBCC;
+}
+
+.all_steps .Deliver span {
+  color: #297899;
+}
+
+.all_steps .Global {
+  background-color: #2978993B;
+}
+
+.all_steps .Global span {
+  color: #fff;
+}
+/*# sourceMappingURL=Steps.css.map */

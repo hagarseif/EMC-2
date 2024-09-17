@@ -3,17 +3,18 @@ import { ReactComponent as F1 } from "../../assets/images/footer1.svg";
 import { ReactComponent as F2 } from "../../assets/images/footer2.svg";
 import styles from "./Footer.module.scss";
 import { ReactComponent as Logo } from "../../assets/images/footer_logo.svg";
-
+import ChangLang from "../../utility/ChangLang";
 const Footer = () => {
+  const { t, direction } = ChangLang();
   return (
-    <div className={styles.footer}>  
+    <div className={styles.footer} dir={direction}>  
         <div className={styles.left}>
           <h1>
-            Have problem?
-            <br /> We would like to help.
+          {t('Home.footer.title')}
+            <br /> {t('Home.footer.main_title')}
           </h1>
           <div className={styles.contact}>
-            <span className={styles.con_title}>Contact us</span>
+            <span className={styles.con_title}>{t("Home.footer.contact")}</span>
             <div className={styles.phone}>
               <F1 />
               <span>+1 (917) 26 777 27</span>

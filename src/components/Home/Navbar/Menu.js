@@ -1,21 +1,14 @@
-import React from "react";
-import { ReactComponent as Logo } from "../../assets/images/dark_logo.svg";
-import { ReactComponent as Globe } from "../../assets/images/globe.svg";
-import { ReactComponent as Linkedin } from "../../assets/images/linkedin.svg";
-import { ReactComponent as Facebook } from "../../assets/images/facebook.svg";
 import { NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import styles from "./Navbar.module.scss";
-const DarkNavbar = () => {
+import { HashLink } from "react-router-hash-link";
+import { ReactComponent as Globe } from "../../assets/images/globe.svg";
+import ChangLang from "../../utility/ChangLang";
+
+const Menu = () => {
+  const { t, i18n } = ChangLang();
   return (
-    <div
-      className={`${styles.nav}`}
-    >
-      <div className={`${styles.logo} d-flex`}>
-        <Logo />
-      </div>
-      <div className={styles.nav_dis}>
-      <ul className={`${styles.list} d-flex align-items-center m-0`}>
+    <div className={styles.toggle_menue}>
+      <ul className={`${styles.mob_list}`}>
         <li className={styles.navItem}>
           <NavLink
             to="/"
@@ -25,7 +18,7 @@ const DarkNavbar = () => {
               }`
             }
           >
-            Home
+            {t("Home.Navbar.home")}
           </NavLink>
         </li>
         <li className={styles.navItem}>
@@ -37,18 +30,18 @@ const DarkNavbar = () => {
               }`
             }
           >
-            About us
+            {t("Home.Navbar.about")}
           </NavLink>
         </li>
 
         <li className={styles.navItem}>
           <HashLink to="/#services" className={styles.link} smooth>
-            Services
+          {t("Home.Navbar.services")}
           </HashLink>
         </li>
         <li className={styles.navItem}>
           <HashLink to="/#industries" className={styles.link} smooth>
-            Industries
+          {t("Home.Navbar.industries")}
           </HashLink>
         </li>
 
@@ -61,7 +54,7 @@ const DarkNavbar = () => {
               }`
             }
           >
-            OurWork
+             {t("Home.Navbar.ourWork")}
           </NavLink>
         </li>
         <li className={styles.navItem}>
@@ -73,24 +66,20 @@ const DarkNavbar = () => {
               }`
             }
           >
-            Contact us
+             {t("Home.Navbar.contact")}
           </NavLink>
         </li>
       </ul>
-      <div className={`${styles.lang_social} d-flex align-items-center `}>
-        <div className={`${styles.lang} `}>
-          <Globe className={styles.icon}/>
-          <span className="px-2">Arabic</span>
-        </div>
-        <div className={styles.social}>
-          <Facebook className={styles.icon} />
-          <Linkedin className={styles.icon} />
-        </div>
+      <div className={`${styles.mob_lang} `}  onClick={
+                i18n.language === "en"
+                  ? () => i18n.changeLanguage("ar")
+                  : () => i18n.changeLanguage("en")
+              }>
+          <Globe />
+          <span className="px-2" >{i18n.language === "en"? "Arabic":"الإنجليزية"}</span>
       </div>
-      </div>
-      
     </div>
   );
 };
 
-export default DarkNavbar;
+export default Menu;

@@ -8,7 +8,6 @@
   display: flex;
 
   .text {
-
     h1 {
       font-weight: 700;
       font-size: 48px;
@@ -24,6 +23,10 @@
     }
   }
 }
+[dir="rtl"] .text p {
+  margin-top: 1rem;
+  line-height: 28px !important;
+}
 ////////////////////////////////////////////
 @media (max-width: 1100px) {
   .vision {
@@ -35,51 +38,51 @@
   }
 }
 @media (max-width: 850px) {
-    .vision {
-      .text{
-        h1{
-            font-size: 40px;
-        }
+  .vision {
+    .text {
+      h1 {
+        font-size: 40px;
       }
     }
   }
-  @media (max-width: 800px) {
-    .vision{
-        align-items: flex-start;
-    }
+}
+@media (max-width: 800px) {
+  .vision {
+    align-items: flex-start;
   }
-  @media (max-width: 600px) {
-    .vision {
-        padding: 2rem 1rem;
-        .img_con {
-            .img {
-              width: 200px;
-            }
-          }
-      .text{
-        h1{
-            font-size: 32px;
-        }
+}
+@media (max-width: 600px) {
+  .vision {
+    padding: 2rem 1rem;
+    .img_con {
+      .img {
+        width: 200px;
+      }
+    }
+    .text {
+      h1 {
+        font-size: 32px;
       }
     }
   }
-  @media (max-width: 600px) {
-    .vision {
-        padding: 2rem 1rem;
-        .img_con {
-            .img {
-              width: 170px;
-            }
-          }
-          .text{
-            p{
-                font-size: 16px;
-            }
-          }
+}
+@media (max-width: 600px) {
+  .vision {
+    padding: 2rem 1rem;
+    .img_con {
+      .img {
+        width: 170px;
+      }
+    }
+    .text {
+      p {
+        font-size: 16px;
+      }
     }
   }
-  @media (max-width: 470px) {
-    .vision {
-        padding: 2rem .5rem;
-    }
+}
+@media (max-width: 470px) {
+  .vision {
+    padding: 2rem 0.5rem;
   }
+}

@@ -1,48 +1,101 @@
-import React, { useEffect, useState } from 'react'
-import styles from './Industry.module.scss'
-import axios from 'axios'
+import styles from "./Industry.module.scss";
+import ChangLang from "../../utility/ChangLang";
+import { industry } from "./data";
+import { ReactComponent as LefttArrow } from "../../assets/images/slider-arr.svg";
+import { ReactComponent as RightArrow } from "../../assets/images/rightslider-arr.svg";
+////////////////////////////
+import Slider from "react-slick";
+import "./styles.scss"; // Custom styles
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Industry = () => {
-      //////////////////get data/////////////
-  const [data,setData]=useState([])
-
-  const baseUrl='http://emc2db-001-site1.itempurl.com' 
-  const urlGet='/api/Industry/GetAlIndustries'
-
-  useEffect(() => {
-    // Make a GET request to fetch text data
-    axios.get(`${baseUrl}${urlGet}`)
-      .then(response => {
-        // Handle text data
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error("Error fetching text data:", error);
-      });
-  }, []);
+  const { i18n, direction } = ChangLang();
+  //////////////
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5, // Show 5 images at a time (one row)
+    slidesToScroll: 1,
+    rows: 2, // Two rows
+    slidesPerRow: 1,
+    responsive: [
+      {
+        breakpoint: 1200, // Large screens (less than 1200px)
+        settings: {
+          slidesToShow: 4, // Show 4 cards per row
+          rows: 2,
+        }
+      },
+      {
+        breakpoint: 992, // Medium screens (less than 992px)
+        settings: {
+          slidesToShow: 3, // Show 3 cards per row
+          rows: 2,
+        }
+      },
+      {
+        breakpoint: 768, // Tablets (less than 768px)
+        settings: {
+          slidesToShow: 2, // Show 2 cards per row
+          rows: 2,
+        }
+      },
+      {
+        breakpoint: 576, // Small mobile screens (less than 576px)
+        settings: {
+          slidesToShow: 1, // Show 1 card per row
+          rows: 2,
+        }
+      }
+    ]// 1 slide per row
+  };
 
   return (
-    <div className={`${styles.container} structure`} id="industries">
-        <h1 className='main_title'>Industries We Serve</h1>
-        <div className={styles.all_services}>
-        {data.map((d, i) => (
-          <div key={i} className={styles.service}>
-            <img
-              className="w-40"
-              src={`data:image/svg+xml;base64,${d.icon}`}
-              alt=""
-            />
-            <img
-              className="w-50"
-              src={`data:image/jpeg;charset=utf-8;base64,${d.icon}`}
-              alt=""
-            />
-            <span>{d.name}</span>
-          </div>
-        ))}
+    <div
+      className={`${styles.container} structure`}
+      id="industries"
+      dir={direction}
+    >
+      <h1 className="main_title">
+        {i18n.language === "en"
+          ? "Industries We Serve"
+          : "القطاعات التي نخدمها"}
+      </h1>
+      <div className={`slider-container`}>
+        <Slider {...settings}>
+          {industry.map((d, index) => (
+            <div key={index} className={`${styles.service} service`}>
+              <img className="w-40" src={d.icon} alt="" />
+              <span>{i18n.language === "en" ? d.name : d.ar_name}</span>
+            </div>
+          ))}
+        </Slider>
+      </div>
+      {/* <div className={styles.slider}>
+        <div className={styles.slider_indicator}>
+          {industry && industry.length
+            ? industry.map((_, i) =>
+                i < industry.length - 9 ? (
+                  <span
+                    key={i}
+                    className={
+                      currentSlide === i || i + 9 === currentSlide
+                        ? `${styles.current_indicator}`
+                        : `${styles.current_indicator} ${styles.inactive_indicator}`
+                    }
+                  ></span>
+                ) : null
+              )
+            : null}
         </div>
-
+        <div className={styles.slider_arrow}>
+          <LefttArrow className={styles.slider_arr} onClick={handelPrev} />
+          <RightArrow className={styles.slider_arr} onClick={handelNext} />
+        </div>
+      </div> */}
     </div>
-  )
-}
-
-export default Industry
+  );
+};
+export default Industry;

@@ -1,22 +1,24 @@
 import React from "react";
 import Img from "../../assets/images/vision.png";
+import Img2 from "../../assets/images/vision2.png";
 import styles from "./Vision.module.scss";
+import ChangLang from "../../utility/ChangLang";
+
 const Vision = () => {
+  const { t, direction } = ChangLang();
+
   return (
-    <div className={`${styles.vision}`}>
+    <div className={`${styles.vision}`} dir={direction}>
       <div className={styles.text}>
-        <h1>Our Vision </h1>
-        <p>
-          We believe every person ,student, teams, and enterprises have the
-          potential to be amazing. And there’s a better way to bring out what
-          they already have in them. We know this because we’ve lived it. we’re
-          always evolving and wants everybody to evolve with us so our mission
-          is to make sure that our customers have exactly what they need to
-          unleash their edge.
-        </p>
+        <h1>{t("About.vision.title")} </h1>
+        <p>{t("About.vision.content")}</p>
       </div>
       <div className={styles.img_con}>
-        <img src={Img} alt="" className={styles.img} />
+        {direction === "ltr" ? (
+          <img src={Img} alt="" className={styles.img} />
+        ) : (
+          <img src={Img2} alt="" className={styles.img} />
+        )}
       </div>
     </div>
   );

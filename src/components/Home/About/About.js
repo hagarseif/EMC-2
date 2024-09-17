@@ -2,27 +2,28 @@ import React from "react";
 import styles from "./About.module.scss";
 import Img from "../../assets/images/Group.png";
 import { ReactComponent as Arrow } from "../../assets/images/Vector.svg";
+import { ReactComponent as RightArrow } from "../../assets/images/right_arrow.svg";
 import { Link } from "react-router-dom";
+import ChangLang from "../../utility/ChangLang";
+
 const About = () => {
+  const { t, direction, i18n } = ChangLang();
   return (
-    <div className={`${styles.about} `}>
+    <div className={`${styles.about} `} dir={direction}>
       <div className={styles.text}>
-        <h6>About EMC² Solutions</h6>
-        <h2>Your Reliable Partner for any problem</h2>
-        <p>
-          EMC² Solutions is a community that offer a wide array of services for
-          customers and students.  our creative team design and develop custom
-          software tailored specifically to our customer's business needs in
-          high-quality and a cost-efficient way to bring growth to your
-          business. Our team also help students to grow in software world
-          Empowering their beautiful Minds, Elevating their Software skills we
-          create a place Where Innovation Meets Education.
-        </p>
-        <Link to='/about'>
-          See More <Arrow className={styles.arrow} />
+        <h6>{t("Home.about.title")}</h6>
+        <h2>{t("Home.about.mainTitle")}</h2>
+        <p>{t("Home.about.content")}</p>
+        <Link to="/about">
+          {t("Home.about.button")}
+          {i18n.language === "en" ? (
+            <Arrow className={styles.arrow} />
+          ) : (
+            <RightArrow className={styles.arrow} />
+          )}
         </Link>
       </div>
-      <img src={Img} alt="" className={styles.img}/>
+      <img src={Img} alt="" className={styles.img} />
     </div>
   );
 };

@@ -1,0 +1,45 @@
+{
+  "Home": {
+    "Navbar": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "industries": "Industries",
+      "ourWork": "OurWork",
+      "contact": "Contact us"
+    },
+    "about": {
+      "title": "About EMC² Solutions",
+      "mainTitle": "Your Reliable Partner for any problem",
+      "content": "EMC² Solutions is a community that offer a wide array of services for customers and students.our creative team design and develop custom software tailored specifically to our customer's business needs in high-quality and a cost-efficient way to bring growth to your business.Our team also help students to grow in software world Empowering their beautiful Minds, Elevating their Software skills we create a place Where Innovation Meets Education.",
+      "button": "See More"
+    },
+    "work":{
+      "title":"Our Creative Work",
+      "more":"Discover more"
+    },
+    "clients":{
+      "title":"Some of Our",
+      "main_title":"Amazing Clients"
+    },
+    "team":{
+      "main_title":"Our Amazing  Family"
+    },
+    "footer":{
+      "title":"Have problem?",
+      "main_title":"We would like to help.",
+      "contact":"Contact us"
+    }
+  },
+  "About": {
+    "vision":{
+      "title":"Our Vision ",
+       "content": "We believe every person ,student, teams, and enterprises have the potential to be amazing. And there’s a better way to bring out what they already have in them. We know this because we’ve lived it. we’re always evolving and wants everybody to evolve with us so our mission is to make sure that our customers have exactly what they need to unleash their edge."
+
+    },
+    "team":{
+      "title":"Our Family"
+    } 
+   
+  }
+}

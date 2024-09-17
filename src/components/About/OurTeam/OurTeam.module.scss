@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 0rem 3rem 4rem;
+  align-items: center;
+  padding: 3rem 2rem 4rem;
   .title {
     text-align: center;
     width: 100%;
@@ -22,7 +23,8 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-content: center;
-    row-gap: 2rem;
+    gap: 2rem;
+    align-items: center;
 
     .card {
       width: 382px;
@@ -70,3 +72,18 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .container {
+  .team {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+}
+
+@media (max-width: 768px) {
+  .container {
+  .team {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
+}

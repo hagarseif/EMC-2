@@ -21,17 +21,18 @@ const Features = () => {
         className={`${styles.title_line} d-flex flex-column align-items-end gap-0`}
       >
         <h1 className="main_title text-center">
-         {i18n.language === "en" ? (
-           <>
-             What We Do for<br />
-             Your Success
-           </>
-         ) : (
-           <>
-             ما نقوم به <br />
-             لضمان نجاحك
-           </>
-         )}
+          {i18n.language === "en" ? (
+            <>
+              What We Do for
+              <br />
+              Your Success
+            </>
+          ) : (
+            <>
+              ما نقوم به <br />
+              لضمان نجاحك
+            </>
+          )}
         </h1>
         <Line className={styles.line} />
       </div>
@@ -46,6 +47,7 @@ const Features = () => {
       </div>
 
       <Swiper
+        dir={direction}
         slidesPerView={3.1}
         spaceBetween={10}
         freeMode={true}

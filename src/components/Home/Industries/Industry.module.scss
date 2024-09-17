@@ -8,6 +8,8 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
     .service {
       display: flex;
       flex-direction: column;

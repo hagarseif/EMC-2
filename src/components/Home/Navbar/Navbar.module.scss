@@ -4,18 +4,21 @@
 
 
 .dark_nav{
-  background: #1e384f;
-  background: linear-gradient(
-    180deg,
-    rgba(30, 56, 79, 1) 0%,
-    rgba(30, 56, 79, 1) 100%,
-    rgba(28, 57, 81, 1) 100%
-  );
+  // background: #1e384f;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(30, 56, 79, 1) 0%,
+  //   rgba(30, 56, 79, 1) 100%,
+  //   rgba(28, 57, 81, 1) 100%
+  // );
 }
 .nav {
   display: grid;
   grid-template-columns: 20% 80%;
   padding: 1.1rem 3rem;
+  position: absolute;
+  top: 0rem;
+  width: 100%;
   .con_menu{
     display: none;
     cursor: pointer;

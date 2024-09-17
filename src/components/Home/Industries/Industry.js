@@ -73,29 +73,8 @@ const Industry = () => {
           ))}
         </Slider>
       </div>
-      {/* <div className={styles.slider}>
-        <div className={styles.slider_indicator}>
-          {industry && industry.length
-            ? industry.map((_, i) =>
-                i < industry.length - 9 ? (
-                  <span
-                    key={i}
-                    className={
-                      currentSlide === i || i + 9 === currentSlide
-                        ? `${styles.current_indicator}`
-                        : `${styles.current_indicator} ${styles.inactive_indicator}`
-                    }
-                  ></span>
-                ) : null
-              )
-            : null}
-        </div>
-        <div className={styles.slider_arrow}>
-          <LefttArrow className={styles.slider_arr} onClick={handelPrev} />
-          <RightArrow className={styles.slider_arr} onClick={handelNext} />
-        </div>
-      </div> */}
-    </div>
+      </div>
+      
   );
 };
 export default Industry;

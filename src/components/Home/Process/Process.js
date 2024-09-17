@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 import { process } from "./data";
-import ChangeLang from '../../utility/ChangLang'
+import ChangeLang from "../../utility/ChangLang";
 import styles from "./Process.module.scss";
 
 const Process = () => {
@@ -16,17 +16,20 @@ const Process = () => {
   let arabic = i18n.language === "ar";
   return (
     <div className={`${styles.process}  structure`} dir={direction}>
-      <h1 className="main_title">{arabic? "الخطوات التي نتبعها" :"Process We Follow"}</h1>
+      <h1 className="main_title">
+        {arabic ? "الخطوات التي نتبعها" : "Process We Follow"}
+      </h1>
       <div className={`${styles.all_processes} ${styles.no_slider}`}>
         {process.map((p, i) => (
           <div className={styles.card} key={i}>
             <p.img className={styles.img} />
-            <h3>{arabic?p.title_ar :p.title}</h3>
-            <p>{arabic ?p.desc_ar : p.desc}</p>
+            <h3>{arabic ? p.title_ar : p.title}</h3>
+            <p>{arabic ? p.desc_ar : p.desc}</p>
           </div>
         ))}
       </div>
       <Swiper
+        dir={direction}
         slidesPerView={3.1}
         spaceBetween={10}
         freeMode={true}
@@ -34,7 +37,7 @@ const Process = () => {
         loop={true}
         breakpoints={{
           0: {
-            slidesPerView: .8,
+            slidesPerView: 0.8,
           },
           390: {
             slidesPerView: 1.2,
@@ -71,15 +74,15 @@ const Process = () => {
         }}
         className={`${styles.swiper} "mySwiper"`}
       >
-          {process.map((p, i) => (
-            <SwiperSlide key={i} className={styles.all_processes}>
-              <div className={styles.card} key={i}>
-                <p.img className={styles.img} />
-                <h3>{arabic?p.title_ar :p.title}</h3>
-                <p>{arabic ?p.desc_ar : p.desc}</p>
-              </div>
-            </SwiperSlide>
-          ))}
+        {process.map((p, i) => (
+          <SwiperSlide key={i} className={styles.all_processes}>
+            <div className={styles.card} key={i}>
+              <p.img className={styles.img} />
+              <h3>{arabic ? p.title_ar : p.title}</h3>
+              <p>{arabic ? p.desc_ar : p.desc}</p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

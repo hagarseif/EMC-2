@@ -52,6 +52,7 @@ const OurWork = () => {
         ))}
       </div>
       <Swiper
+        dir={direction}
         slidesPerView={3.1}
         spaceBetween={10}
         freeMode={true}

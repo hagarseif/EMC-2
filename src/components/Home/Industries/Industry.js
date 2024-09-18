@@ -1,8 +1,6 @@
 import styles from "./Industry.module.scss";
 import ChangLang from "../../utility/ChangLang";
 import { industry } from "./data";
-import { ReactComponent as LefttArrow } from "../../assets/images/slider-arr.svg";
-import { ReactComponent as RightArrow } from "../../assets/images/rightslider-arr.svg";
 ////////////////////////////
 import Slider from "react-slick";
 import "./styles.scss"; // Custom styles
@@ -20,6 +18,8 @@ const Industry = () => {
     slidesToScroll: 1,
     rows: 2, // Two rows
     slidesPerRow: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1200, // Large screens (less than 1200px)

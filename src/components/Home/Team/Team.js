@@ -12,8 +12,11 @@ import Slider from "react-slick";
 // import "./Team.scss"; // Custom styles
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRef, useState } from "react";
 const Team = () => {
   const { t, direction } = ChangLang();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
   const team = [
     {
       id: 1,
@@ -54,7 +57,7 @@ const Team = () => {
   ];
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3, // Show 5 images at a time (one row)
     slidesToScroll: 1,
@@ -62,6 +65,17 @@ const Team = () => {
     slidesPerRow: 1,
     autoplay: true, // Enable autoplay
     autoplaySpeed: 4000,
+    beforeChange: (oldIndex, newIndex) => {
+      setCurrentSlide(newIndex);
+    },
+    afterChange: (currentIndex) => {
+      const totalSlides = team.length; // Total number of slides (update according to your case)
+      if (currentIndex === totalSlides - 3) { // Check if the last set of slides is visible
+        setTimeout(() => {
+          sliderRef.current.slickGoTo(0); // Reset to the first slide
+        }, 4000); // Delay of 5 seconds before resetting to the first slide
+      }
+    },
     responsive: [
       {
         breakpoint: 1240, // For screens < 1200px
@@ -115,7 +129,7 @@ const Team = () => {
       </div>
       <div className={`${styles.team}`}>
         <div className={`slider-container`}>
-          <Slider {...settings}>
+          <Slider {...settings} ref={sliderRef}>
             {team.map((d, i) => (
               <div className={styles.card} key={i}>
                 <img src={d.image} alt="" />

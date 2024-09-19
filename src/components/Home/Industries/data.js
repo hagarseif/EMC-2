@@ -46,12 +46,12 @@ export const industry = [
       name: "On-Demand Solutions ",
       ar_name: "الحلول الفورية",
     },
-    {
-      id: 7,
-      icon: I7,
-      name: "Gaming",
-      ar_name: "الألعاب",
-    },
+    // {
+    //   id: 7,
+    //   icon: I7,
+    //   name: "Gaming",
+    //   ar_name: "الألعاب",
+    // },
     {
       id: 8,
       icon: I8,
@@ -60,13 +60,13 @@ export const industry = [
     },
     {
       id: 9,
-      icon: I9,
+      icon: I10,
       name: "Food & Restaurant",
       ar_name: "الطعام والمطاعم",
     },
     {
       id: 10,
-      icon: I10,
+      icon: I9,
       name: "Public services & utilities",
       ar_name: "الخدمات العامة والمرافق",
     },

@@ -3,7 +3,9 @@ import { ReactComponent as Letter } from "../assets/images/letter_send.svg";
 import { ReactComponent as Letter2 } from "../assets/images/letter_send2.svg";
 import styles from "./Contact.module.scss";
 import axios from "axios";
+import ChangLang from "../utility/ChangLang";
 const Contact = () => {
+  const { t, direction } = ChangLang();
   const baseUrl = "http://emc2db-001-site1.itempurl.com";
   const urlPost = "/api/ContactUs/AddContact";
   const [name,setName]=useState("")
@@ -41,33 +43,30 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} dir={direction}>
       <div className={styles.contact}>
         <div className={styles.text_arrow}>
           <div className={styles.text}>
             <p className={styles.p1}>
-              Don’t be stranger,
-              <br /> Let’s Connect !
+             {t("contactUs.form.title")}
             </p>
             <p className={styles.p2}>
-              Thank you for getting in touch!
-              <br />
-              We’re always ready to help💙
+            {t("contactUs.form.sub_title")}
             </p>
           </div>
           <Letter className={styles.arrow1}/>
         </div>
         <div className={styles.form_div}>
           <form onSubmit={handelSubmit}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t("contactUs.form.name")}</label>
             <input type="text" placeholder="" id="name" onChange={onhandelName} value={name}/>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t("contactUs.form.email")}</label>
             <input type="email" placeholder="" id="email" onChange={onhandelEmail} value={email}/>
-            <label htmlFor="Phone">Phone Number</label>
+            <label htmlFor="Phone">{t("contactUs.form.phone")}</label>
             <input type="text" placeholder="" id="Phone" onChange={onhandelPhone} value={phone}/>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t("contactUs.form.message")}</label>
             <textarea name="message" id="message" onChange={onhandelMessage} value={message}/>
-            <button>Submit</button>
+            <button>{t("contactUs.form.submit")}</button>
           </form>
           <Letter2 className={styles.letter} />
         </div>

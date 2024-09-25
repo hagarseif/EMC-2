@@ -40,6 +40,16 @@
     "team":{
       "title":"Our Family"
     } 
-   
+  },
+  "contactUs":{
+    "form":{
+      "title":"Don’t be stranger,\nLet’s Connect !",
+      "sub_title":"Thank you for getting in touch!\nWe’re always ready to help💙",
+      "name":"Name",
+      "email":"Email",
+      "Phone":"Phone Number",
+      "message":"Message",
+      "submit":"Submit"
+    }
   }
 }
